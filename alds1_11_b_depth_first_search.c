@@ -29,7 +29,9 @@ void dfs_visit(int node) {
 }
 
 void dfs() {
-    dfs_visit(0);
+    for (int i = 0; i < n; i++) {
+        dfs_visit(i);
+    } 
 
     for (int i = 0; i < n; i++) {
         printf("%d %d %d\n", i + 1, find[i], end[i]);
