@@ -3,7 +3,7 @@
 
 int main(int argc, char const *argv[])
 {
-    int martx[MAX][MAX] = { 0 };
+    int matrix[MAX][MAX] = { 0 };
     int n;
     scanf("%d", &n);
 
@@ -13,13 +13,13 @@ int main(int argc, char const *argv[])
         for (int i = 0; i < degree; i++) {
             int v;
             scanf("%d", &v);
-            martx[node - 1][v - 1] = 1; 
+            matrix[node - 1][v - 1] = 1; 
         }
     }
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            printf("%d", martx[i][j]);
+            printf("%d", matrix[i][j]);
             if (j != n - 1) {
                 printf(" ");
             }

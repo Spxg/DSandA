@@ -4,7 +4,7 @@
 #define GRAY 1
 #define BLACK 2
 
-int martx[LEN][LEN] = { 0 };
+int matrix[LEN][LEN] = { 0 };
 int color[LEN] = { 0 };
 int find[LEN] = { 0 };
 int end[LEN] = { 0 };
@@ -16,7 +16,7 @@ void dfs_visit(int node) {
     find[node] = count;
     color[node] = GRAY;
     for (int i = 0; i < n; i++) {
-        if (martx[node][i] == 0) {
+        if (matrix[node][i] == 0) {
             continue;
         }
         if (color[i] == WRITE) {
@@ -47,7 +47,7 @@ int main(int argc, char const *argv[])
         for (int i = 0; i < degree; i++) {
             int v;
             scanf("%d", &v);
-            martx[node - 1][v - 1] = 1; 
+            matrix[node - 1][v - 1] = 1; 
         }
     }
     dfs();
